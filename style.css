@@ -45,17 +45,17 @@ body {
   padding: 15px 20px;
   width: auto;
   margin: 35px 0;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 #main > #endec-div h3 {
   font-size: 17px;
   display: flex;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 30px;
   font-weight: 500;
   cursor: pointer;
-  padding: 12px 12px;
+  padding: 15px 15px;
   transform: 0.2s ease;
 }
 
@@ -97,6 +97,11 @@ body {
   resize: none;
   outline: none;
   background-color: #1c1c1c;
+  transition: all ease 0.3s;
+}
+#encryption textarea:hover {
+  box-shadow: 0 0 30px -10px #403b3b;
+  transform: scale(1.005);
 }
 #encryption input {
   width: 100%;
@@ -112,24 +117,24 @@ body {
 #encryption button {
   display: flex;
   align-items: center;
-  color: #6e6e6e;
   background-color: #1c1c1c;
   border: none;
   width: 100%;
   justify-content: center;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 30px;
   color: #eee;
   font-size: 17px;
   cursor: pointer;
+  transition: all ease 0.3s;
 }
 button span {
   display: flex;
   margin-right: 10px;
 }
-button span {
-  display: flex;
-  margin-right: 10px;
+#encryption button:hover {
+  background-color: #333;
+  transform: scale(1.01);
 }
 button img {
   height: 20px;
@@ -138,6 +143,11 @@ button img {
   height: 20px;
   padding-left: 10px;
   padding-top: 2px;
+  transition: all ease 0.3s;
+}
+
+#footer img:hover {
+  transform: scale(1.1);
 }
 #decryption {
   width: 55%;
@@ -165,6 +175,11 @@ button img {
   margin-bottom: 50px;
   outline: none;
   background-color: #1c1c1c;
+  transition: all ease 0.3s;
+}
+#decryption textarea:hover {
+  box-shadow: 0 0 30px -10px #403b3b;
+  transform: scale(1.005);
 }
 #decryption input {
   width: 100%;
@@ -186,10 +201,15 @@ button img {
   width: 100%;
   justify-content: center;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 30px;
   color: #eee;
   font-size: 17px;
   cursor: pointer;
+  transition: all ease 0.3s;
+}
+#decryption button:hover {
+  background-color: #333;
+  transform: scale(1.01);
 }
 
 #result {
@@ -212,11 +232,14 @@ button img {
 }
 @media (max-width: 500px) {
   #main > h1 {
-    font-size: 40px;
+    font-size: 32px;
   }
   #main > #endec-div {
     padding: 10px 10px;
     margin: 30px 0;
+  }
+  #main > #endec-div h3 {
+    font-size: 14px;
   }
 
   #encryption textarea {

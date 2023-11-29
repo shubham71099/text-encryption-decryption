@@ -1,5 +1,26 @@
 var clutter = "";
 
+function emptyfieldtext() {
+  const datavalidate = document.getElementById("txtmsg").value;
+
+  if (!datavalidate) {
+    alert("Please write text to encrypt");
+    document.querySelector("#result").style.display = "none";
+  } else {
+    document.querySelector("#result").style.display = "block";
+  }
+}
+function emptyfieldemoji() {
+  const datavalidate = document.getElementById("emojimsg").value;
+
+  if (!datavalidate) {
+    alert("Please paste emoji to decrypt");
+    document.querySelector("#result").style.display = "none";
+  } else {
+    document.querySelector("#result").style.display = "block";
+  }
+}
+
 function encryption() {
   document.querySelector("#encrypt-btn").addEventListener("click", function () {
     var input = document.getElementById("txtmsg").value;
@@ -55,10 +76,14 @@ function decryption() {
       }
     }
 
+    const datavalidate = document.getElementById("emojimsg").value;
+
     if (found && found.clutter === clutter2) {
       document.querySelector("#result").style.display = "block";
       document.querySelector("#result").style.color = "#eee";
       document.querySelector("#result").innerHTML = found.input;
+    } else if (!datavalidate) {
+      document.querySelector("#result").style.display = "none";
     } else {
       document.querySelector("#result").style.display = "block";
       document.querySelector("#result").style.color = "red";
@@ -69,9 +94,9 @@ function decryption() {
 }
 
 function btnClicking() {
-  document.querySelector("button").addEventListener("click", function () {
-    document.querySelector("#result").style.display = "block";
-  });
+  // document.querySelector("button").addEventListener("click", function () {
+  //   document.querySelector("#result").style.display = "block";
+  // });
 
   document.querySelector("#dec-btn").addEventListener("click", function () {
     document.querySelector("#decryption").style.display = "block";

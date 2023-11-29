@@ -11,7 +11,7 @@
   <body>
     <div id="main">
       <h1>
-        Text <span><img src="./arrow.png" alt="" /></span>Emojis
+        Text <span><img src="./arrow.png" alt="" /></span>Emoji
       </h1>
 
       <div id="endec-div">
@@ -26,8 +26,8 @@
       <div id="encryption">
         <h5>Type a Text</h5>
         <textarea
-          placeholder="Enter a text"
-          name=""
+          placeholder="Write text here"
+          name="txtmsg"
           id="txtmsg"
           cols="40"
           rows="10"
@@ -39,7 +39,7 @@
           id="password"
           placeholder="E.g. 123456"
         /> -->
-        <button id="encrypt-btn">
+        <button id="encrypt-btn" onclick="emptyfieldtext()">
           <span><img src="./lock.png" alt="" /></span>Encrypt Text
         </button>
       </div>
@@ -60,7 +60,7 @@
           id="finalpassword"
           placeholder="E.g. 123456"
         /> -->
-        <button id="decrypt-btn">
+        <button id="decrypt-btn" onclick="emptyfieldemoji()">
           <span><img src="./unlock.png" alt="" /></span>Decrypt Emoji
         </button>
       </div>
