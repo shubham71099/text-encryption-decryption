@@ -134,7 +134,11 @@ button span {
 button img {
   height: 20px;
 }
-
+#footer img {
+  height: 20px;
+  padding-left: 10px;
+  padding-top: 2px;
+}
 #decryption {
   width: 55%;
   display: flex;
