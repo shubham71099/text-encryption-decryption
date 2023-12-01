@@ -9,6 +9,7 @@
     <title>Text to Emoji</title>
   </head>
   <body>
+    <div id="preloader"></div>
     <div id="main">
       <h1>
         Text <span><img src="./arrow.png" alt="" /></span>Emoji
@@ -77,5 +78,12 @@
     </div>
 
     <script src="./script.js"></script>
+    <script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener("load",function(){
+        loader.style.display = "none";
+      })
+    </script>
   </body>
 </html>
